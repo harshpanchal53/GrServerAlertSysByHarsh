@@ -27,7 +27,7 @@ class ServerController extends Controller
     {
         Server::create($request->validate([
             'name' => 'required',
-            'ip' => 'required|ip',
+            'ip' => 'required',
             'port' => 'required|integer'
         ]));
 
@@ -43,7 +43,7 @@ class ServerController extends Controller
     {
         $server->update($request->validate([
             'name' => 'required',
-            'ip' => 'required|ip',
+            'ip' => 'required',
             'port' => 'required|integer'
         ]));
 
